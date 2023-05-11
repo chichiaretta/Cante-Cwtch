@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-header{ background: black;padding: 10px x; margin: 10px;}
-=======
 *{box-sizing: border-box;}
 
 header{ background: black;padding: 10px x; margin: 10px}
->>>>>>> 41ff5ec9ba18af6e8257cbd0be8ef51295a056c7
 a{text-decoration: none; color:#ffffff;}
 li{color:#edb342; font-family: papyrus;}
 body{background-color:#000;}
