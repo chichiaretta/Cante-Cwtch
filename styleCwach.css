@@ -11,8 +11,8 @@ h2{text-align: center;margin-top: 25%;color: white;}
 .menu-container{ text-align:center; border: 0px; margin:0px; }
 
 /*header*/
-.header_logo{float: left; width: 20%; height: 100%; display: block; }
-.header_logo img{height: 100%; width: 100%; object-fit: cover;}
+.header_logo{float: left; width: 20%; height: 100%; display: block;}
+.header_logo img{height: 20%; width: 100%; object-fit: cover;}
 .menu-container{float:right; margin: 0px; padding: 0px;}
 .menu-container{transition: all 1s cubic-bezier(.215, .61, .355, 1);}
 .header_menu_item{display: inline-block; padding: 10px; text-decoration: none;}
@@ -75,7 +75,7 @@ h2{text-align: center;margin-top: 25%;color: white;}
 
 
 /*modifica contatti*/
-.section{ width:50%; height:100%;  background-color: #edb342;float: left;}
+.section{ width:50%; height:100%;  background-color: #edb342; float: left;}
 .section_input{ align-items: center;justify-content: center;}
 .section_input input{ width:70%; margin: 10% 20% 0% 10%;padding:20px;border:0px; border-bottom: 1px solid black;
      background-color: #edb342; }
