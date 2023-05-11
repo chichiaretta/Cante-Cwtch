@@ -1,5 +1,3 @@
-*{box-sizing: border-box;}
-
 header{ background: black;padding: 10px x; margin: 10px}
 a{text-decoration: none; color:#ffffff;}
 li{color:#edb342; font-family: papyrus;}
@@ -11,7 +9,9 @@ h2{text-align: center;margin-top: 25%;color: white;}
 
 
 .menu-container{ text-align:center; border: 0px; margin:0px; }
-.header_logo{float: left; width: 20%; height: 100%; display: block;}
+
+
+.header_logo{float: left; width: 20%; height: 100%; display: block; }
 .header_logo img{height: 100%; width: 100%; object-fit: cover;}
 .menu-container{float:right; margin: 0px; padding: 0px;}
 .menu-container{transition: all 1s cubic-bezier(.215, .61, .355, 1);}
