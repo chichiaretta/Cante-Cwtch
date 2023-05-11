@@ -10,7 +10,7 @@ h2{text-align: center;margin-top: 25%;color: white;}
 
 .menu-container{ text-align:center; border: 0px; margin:0px; }
 
-
+/*header*/
 .header_logo{float: left; width: 20%; height: 100%; display: block; }
 .header_logo img{height: 100%; width: 100%; object-fit: cover;}
 .menu-container{float:right; margin: 0px; padding: 0px;}
@@ -20,12 +20,12 @@ h2{text-align: center;margin-top: 25%;color: white;}
 .header_icon_bar{display: block; float: right; padding: 10px; display: none;transition: all 1s cubic-bezier(.215, .61, .355, 1);}
 .header_icon_bar span{display: block; height:3px; width:30px; background:#edb342; margin-bottom: 5px;}
 
-
+/*pagina iniziale*/
 .cover_copy{background-color: #edb342; height:90vh ;position:relative;z-index:1; padding: 20px;}
 .cover_copy img{ display: block; margin: auto; height: 40%; padding-top: 100px;}
 .cover_copy h1,h4{color: #000; text-align: center; margin:0px;}
 
-
+/*container testi e foto*/
 .presentazione{padding:0; height:100vh; display:flex; background-color: #000000;}
 .slider{width:50%;height: 100%; overflow: hidden; float: left; }
 .slides{width:500%; height:100%; display: flex;}
@@ -35,12 +35,18 @@ h2{text-align: center;margin-top: 25%;color: white;}
 #sl1{float: right;}
 .slider img{ object-fit: cover;width:100%; height: 100%;}
 
+#cs1{margin-left:20%;}
+.container_slide{margin-left: 10%;margin-top: 5%; margin-bottom: 5%; width: 70%;}
+.container{background-color:#edb342;float:right;width:50%;height: 100%;}
+.container_slide p{margin: 10% 10% 0% 10%; text-align: center;color: white;}
+.container li{display: block; text-align: center; padding: 20px;color: white;font: size 40px;}
+
+
+/*pallini di navigazione per immagini*/
 .navigation_manual{width: 50%;margin-top: -20%;display: flex;margin-left: 30%;}
 .manual-btn{border: 2px solid #edb342;padding: 5px; border-radius: 10px;cursor:pointer;transition: 2s;}
 .manual-btn:not(:last-child){margin-right: 20px;}
 .manual-btn:hover{background: black;}
-
-
 
 #radio1:checked ~ .first{margin-left: 0;}
 #radio2:checked ~ .first{margin-left: -20%;}
@@ -67,13 +73,8 @@ h2{text-align: center;margin-top: 25%;color: white;}
 #radio19:checked ~ .first{margin-left: -40%;}
 #radio20:checked ~ .first{margin-left: -60%;}
 
-#cs1{margin-left:20%;}
-.container_slide{margin-left: 10%;margin-top: 5%; margin-bottom: 5%; width: 70%;}
-.container{background-color:#edb342;float:right;width:50%;height: 100%;}
-.container_slide p{margin: 10% 10% 0% 10%; text-align: center;color: white;}
-.container li{display: block; text-align: center; padding: 20px;color: white;font: size 40px;}
 
-/* modifica contatti*/
+/*modifica contatti*/
 .section{ width:50%; height:100%;  background-color: #edb342;float: left;}
 .section_input{ align-items: center;justify-content: center;}
 .section_input input{ width:70%; margin: 10% 20% 0% 10%;padding:20px;border:0px; border-bottom: 1px solid black;
@@ -89,7 +90,7 @@ input::placeholder{color: rgb(22, 22, 22);}
 .map{height: 50vh; width: 100%;}
 .map iframe{width: 100%; height: 100%;}
 
-
+/*footer*/
 .footer-container{ display: flex;margin: auto;margin-top:5% ;width: 80%;}
 .footer p{float: right;}
 .footer-container-contatti p,h3{color:#ffffff;display: inline;}
@@ -108,7 +109,7 @@ input::placeholder{color: rgb(22, 22, 22);}
 .footer-container-copyright p{color:#ffffff;}
 .footer-container-copyright {margin:10% 25% 2% 25% ;}
 
-
+/*sticker per whatsapp*/
 .img-res{height: auto; width: 100%;}
 .wa-link{
   display: inline-block; 
@@ -117,6 +118,8 @@ input::placeholder{color: rgb(22, 22, 22);}
   bottom:20px;
   right:20px;
 }
+
+/*responsive*/
 @media(max-width: 767px){
   .header_icon_bar{display: block;}
   .header_menu_item{display:block;}
@@ -139,6 +142,7 @@ input::placeholder{color: rgb(22, 22, 22);}
   .footer-container-orari{flex-grow: 1;margin: 12% 0% 10% 0%;}
   .footer-container-copyright {margin:10% 5% 2% 5% ; text-align: center;}
 }
+
 .clearfix:after {
     visibility: hidden;
     display: block;
