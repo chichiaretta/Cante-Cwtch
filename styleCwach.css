@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 header{ background: black;padding: 10px x; margin: 10px;}
+=======
+*{box-sizing: border-box;}
+
+header{ background: black;padding: 10px x; margin: 10px}
+>>>>>>> 41ff5ec9ba18af6e8257cbd0be8ef51295a056c7
 a{text-decoration: none; color:#ffffff;}
 li{color:#edb342; font-family: papyrus;}
 body{background-color:#000;}
@@ -22,8 +28,6 @@ h2{text-align: center;margin-top: 25%;color: white;}
 .cover_copy{background-color: #edb342; height:90vh ;position:relative;z-index:1; padding: 20px;}
 .cover_copy img{ display: block; margin: auto; height: 40%; padding-top: 100px;}
 .cover_copy h1,h4{color: #000; text-align: center; margin:0px;}
-
-/* h5{ padding-left: 10px; padding-right: 10px; text-align: center;}*/
 
 
 .presentazione{padding:0; height:100vh; display:flex; background-color: #000000;}
