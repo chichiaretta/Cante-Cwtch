@@ -24,7 +24,9 @@
 </head>
 
 <body>
-    <div>ciao</div>
+    <div class = "login">
+        
+    </div>
 </body>
 
 </html>
