@@ -24,19 +24,12 @@
 </head>
 
 <body>
-    <header>
-        <div class="tornahome">
-            <img src="../immagini/loghi/sfondo" alt="">
-            <p>Torna alla home</p>
-        </div>
+    <header class="hlogin">
+        <div>ciao</div>
     </header>
 
     <main>
-        <div class="accesso">
-            <table class="tabaccesso">
-                <th colspan="2">Hai già un account?</th>
-            </table>
-        </div>
+
     </main>
 
     <footer>
