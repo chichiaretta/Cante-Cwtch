@@ -1,19 +1,19 @@
 *{box-sizing: border-box;}
 
-  body{background-color:#000; height: 100%; width: 100%;}
+body{background-color:#000; height: 100%; width: 100%;}
 
-  a{text-decoration: none; color:#ffffff;}
+a{text-decoration: none; color:#ffffff;}
 
-  li{color:#edb342; font-family: 'Ubuntu', sans-serif;}
+li{color:#edb342; font-family: 'Ubuntu', sans-serif;}
 
-  p{font-family: 'Ubuntu', sans-serif;}
+p{font-family: 'Ubuntu', sans-serif;}
 
-  ul{margin: 0%; padding: 0%;}
+ul{margin: 0; padding: 0;}
 
-  h1,
-  h4 {font-family:"Papyrus";}
+h1,
+h4 {font-family:"Papyrus";}
 
-  h2{font-family:"Papyrus"; text-align: center; margin-top: 25%; color: white;}
+h2{font-family:"Papyrus"; text-align: center; margin-top: 25%; color: white;}
 
 
 
@@ -21,25 +21,27 @@
 
 header{background-color: black; width: 100%; height: 15%;}
 
-.menu-container{text-align: center; border: 0px; margin: 0px; float: right; padding: 0px; transition: all 1s cubic-bezier(.215, .61, .355, 1);}
+.header_menu_login{display: inline-block; padding: 10px; text-decoration: none; font-family: 'Ubuntu', sans-serif;}
+.header_menu_login a:hover{color: black; display: block; background:rgb(252, 252, 252)}
 
-.header_logo{float: left; width: 20%; height: 100%; display: block;}
-.header_logo img{height: 20%; width: 100%; object-fit: cover;}
+.menu-container{text-align: center; border: 0px; margin: 0px; float: right; padding: 0px; transition: all 1s cubic-bezier(.215, .61, .355, 1);}
 
 .header_menu_item{display: inline-block; padding: 10px; text-decoration: none; font-family: 'Ubuntu', sans-serif;}
 .header_menu_item a:hover{color: black; display: block;background:rgb(252, 252, 252)}
 
-.header_menu_login{display: inline-block; padding: 10px; text-decoration: none; font-family: 'Ubuntu', sans-serif;}
-.header_menu_login a:hover{color: black; display: block; background:rgb(252, 252, 252)}
+.header_logo{float: left; width: 20%; height: 100%; display: block;}
+.header_logo img{height: 20%; width: 100%; object-fit: cover;}
+
+
 
 .header_icon_bar{display: block; float: right; padding: 10px; display: none; transition: all 1s cubic-bezier(.215, .61, .355, 1);}
-.header_icon_bar span{display: block; height: 3px; width: 30px; background:#edb342; margin-bottom: 5px;}
+.header_icon_bar span{display: block; height: 3px; width: 30px; background:#5c9664; margin-bottom: 5px;}
 
 
 
 /*PAGINA INIZIALE*/
 
-.cover_copy{background-color: #edb342; height: 500px; position:relative; z-index:1; padding: 20px;}
+.cover_copy{background-color: #5c9664; height: 500px; position:relative; z-index:1; padding: 20px;}
 .cover_copy img{display: block; margin: auto; height: 75%; padding-top: 20px; width: 400px;}
 .cover_copy h1,h4{color: #000; text-align: center; margin: 0px;}
 
@@ -62,7 +64,7 @@ header{background-color: black; width: 100%; height: 15%;}
 
 #cs1{margin-left: 20%;}
 
-.container{background-color:#edb342; float: right; width: 50%; height: 100%;}
+.container{background-color:#5c9664; float: right; width: 50%; height: 100%;}
 .container li{display: block; text-align: center; padding: 20px; color: white; font-size: 40px;}
 
 .container_slide{margin-left: 10%; margin-top: 5%; margin-bottom: 5%; width: 70%;}
@@ -74,7 +76,7 @@ header{background-color: black; width: 100%; height: 15%;}
 
 .navigation_manual{width: 50%; margin-top: -20%; display: flex; margin-left: 30%;}
 
-.manual-btn{border: 2px solid #edb342; padding: 5px; border-radius: 10px; cursor: pointer; transition: 2s;}
+.manual-btn{border: 2px solid #5c9664; padding: 5px; border-radius: 10px; cursor: pointer; transition: 2s;}
 .manual-btn:not(:last-child){margin-right: 20px;}
 .manual-btn:hover{background: black;}
 
@@ -107,10 +109,10 @@ header{background-color: black; width: 100%; height: 15%;}
 
 /*MODIFICA CONTATTI*/
 
-.section{width: 50%; height: 100%; background-color: #edb342; float: left;}
+.section{width: 50%; height: 100%; background-color: #5c9664; float: left;}
 .section_input{align-items: center; justify-content: center;}
 .section_input input{width: 70%; margin: 10% 20% 0% 10%; padding: 20px; border: 0px; border-bottom: 1px solid black; 
-  background-color: #edb342;}
+  background-color: #5c9664;}
 
 .button{display: inline-block; border: 1px solid #060606; padding: 0.2% 30% 0.2% 30%; margin: 10% 20% 0% 20%; transition: all 0.4s ease-in-out;}
 .button:hover{color: white; background-color: rgb(0, 0, 0); transform: scale(1.1);}
