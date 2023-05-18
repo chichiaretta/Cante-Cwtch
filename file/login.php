@@ -14,7 +14,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Cwtch</title>
-    <link rel="stylesheet" href="styleCwach.css">
+    <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,9 +24,17 @@
 </head>
 
 <body>
-    <div class = "login">
+    <header class="hlogin">
+        <div>ciao</div>
+    </header>
+
+    <main>
+
+    </main>
+
+    <footer>
         
-    </div>
+    </footer>
 </body>
 
 </html>
