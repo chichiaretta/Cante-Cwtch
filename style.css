@@ -111,13 +111,13 @@ h4{color: #000; text-align: center; margin:0px;}
 .footer_container{ display: flex; margin: auto; width: 90%; padding: 20px;}
 .footer p{float: right;}
 
-.footer_container_contatti{width:30%; position: relative; padding: 10px;}
+.footer_container_contatti{width:40%; position: relative; padding: 10px;}
 .footer_container_contatti p,h3{color:#ffffff;display: inline;}
 .footer_container_contatti ul{display: flex;position:absolute;justify-content: end;}
 .footer_container_contatti img{width: 100%; height: auto;}
 .footer_container_contatti li{display:block; width: 15%; margin-left: 10px; margin-right: 10px;}
 
-.footer_container_orari{padding: 10px; width: 40%;}
+.footer_container_orari{padding: 10px; width: 30%;}
 .footer_container_orari p,h3{color:#ffffff;display: inline;}
 .footer_container_orari li{display: inline-block; width: 100%;color: white; }
 
