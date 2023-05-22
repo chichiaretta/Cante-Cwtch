@@ -107,29 +107,26 @@ h4{color: #000; text-align: center; margin:0px;}
 
 
 
-/* FOOTER */
-
+/*FOOTER*/
+.footer_container{ display: flex; margin: auto; width: 90%; padding: 20px;}
 .footer p{float: right;}
 
-.footer_container{display: flex; margin: auto; margin-top:5%; width: 80%;}
-
-.footer_container_contatti{flex-grow: 1; position: relative;}
-.footer_container_contatti p,
-h3{color:#ffffff; display: inline;}
-.footer_container_contatti ul{display: flex; position:absolute; justify-content: end;}
+.footer_container_contatti{width:30%; position: relative; padding: 10px;}
+.footer_container_contatti p,h3{color:#ffffff;display: inline;}
+.footer_container_contatti ul{display: flex;position:absolute;justify-content: end;}
 .footer_container_contatti img{width: 100%; height: auto;}
-.footer_container_contatti li{display:block; width: 15%; padding:10px;}
+.footer_container_contatti li{display:block; width: 15%; margin-left: 10px; margin-right: 10px;}
 
-.footer_container_orari{flex-grow: 1; margin-left:10%;}
-.footer_container_orari p{color:#ffffff; display: inline;}
-.footer_container_orari h3{float:left; color:#ffffff; display: inline;}
-.footer_container_orari li{display: inline-block; width: 50%; margin-left:2%; color: white;}
+.footer_container_orari{padding: 10px; width: 40%;}
+.footer_container_orari p,h3{color:#ffffff;display: inline;}
+.footer_container_orari li{display: inline-block; width: 100%;color: white; }
 
-.footer_container_posto{flex-grow:0.5;}
-.footer_container_posto p,h3{color:#ffffff;display: inline; margin:0px;}
+.footer_container_posto p,h3{color:#ffffff;display: inline;}
+.footer_container_posto{width: 30%; padding: 10px;}
 
-.footer_container_copyright{margin:10% 25% 2% 25%;}
-.footer_container_copyright p{color:#ffffff;}
+
+.footer_container_copyright p{color:#ffffff; text-align: center;}
+.footer_container_copyright {padding: 20px;}
 
 
 
