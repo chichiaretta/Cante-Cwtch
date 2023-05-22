@@ -55,7 +55,7 @@ h4{color: #000; text-align: center; margin:0px;}
 .slides{width:500%; height:100%; display: flex;}
 .slides input{display:none;}
 
-.slide_first{width:20%; height:100%; display: flex;}
+.slide first{width:20%; height:100%; display: flex;}
 
 .slide{width:20%; transition: 0.6s;}
 
@@ -131,20 +131,27 @@ h3{color:#ffffff; display: inline;}
 
 
 /* MODIFICA CONTATTI */
-.section{ width:50%; height:100%;  background-color: #5c9664;float: left;}
-.section_input{ align-items: center;justify-content: center;}
-.section_input input{ width:70%; margin: 10% 20% 0% 10%;padding:20px;border:0px; border-bottom: 1px solid black;
-    background-color: #5c9664; }
-.button{display: inline-block;border: 1px solid #060606;padding: 0.2% 30% 0.2% 30%; margin: 10% 20% 0% 20%; transition: all 0.4s ease-in-out;}
-.button:hover{color: white;background-color: rgb(0, 0, 0);transform: scale(1.1);}
+
+.container_contatti{width: 70%; height: 75%; margin: 0 auto; text-align: center;}
+.info_contatti{padding-top: 50px; margin: 0 auto;}
+
+.section{width:50%; height:100%; background-color: #5c9664; float: left;}
+.section_input{align-items: center; justify-content: center;}
+.section_input input{width:70%; margin: 10% 20% 0% 10%; padding:20px; border:0px; border-bottom: 1px solid black;
+    background-color: #5c9664;}
+
+.button{display: inline-block; border: 1px solid #060606; padding: 0.2% 30% 0.2% 30%; margin: 10% 20% 0% 20%; transition: all 0.4s ease-in-out;}
+.button:hover{color: white; background-color: rgb(0, 0, 0); transform: scale(1.1);}
+
 input:focus{outline: none;}
 input::placeholder{color: rgb(22, 22, 22);}
-.cover{height: 30vh;width: 100%;margin-top: 10%;position: relative;z-index: 4;background-color: rgb(0, 0, 0);}
-.cover p{font-family: "Papyrus" ; font-size: 30px;margin: 9% 20% 20% 30%;position: absolute;color: rgb(3, 3, 3);}
-.cover img{width: 100%; height: 100%;object-fit: cover;z-index: -1;}
+
+.cover{height: 30vh; width: 100%; margin-top: 10%; position: relative; z-index: 4; background-color: rgb(0, 0, 0);}
+.cover p{font-family: "Papyrus"; font-size: 30px; margin: 9% 20% 20% 30%; position: absolute; color: rgb(3, 3, 3);}
+.cover img{width: 100%; height: 100%; object-fit: cover; z-index: -1;}
+
 .map{height: 50vh; width: 100%;}
 .map iframe{width: 100%; height: 100%;}
-
 
 
 
@@ -156,6 +163,7 @@ input::placeholder{color: rgb(22, 22, 22);}
   bottom:20px;
   right:20px;
 }
+
 @media(max-width: 767px){
   .header_icon_bar{display: block;}
   .header_menu_item{display:block;}
@@ -188,4 +196,3 @@ input::placeholder{color: rgb(22, 22, 22);}
   }
 * html .clearfix        { zoom: 1;}
 *:first_child+html .clearfix {zoom: 1;}
-
