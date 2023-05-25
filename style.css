@@ -105,28 +105,68 @@ h4{color: #000; text-align: center; margin:0px;}
 #radio19:checked ~ .first{margin-left: -40%;}
 #radio20:checked ~ .first{margin-left: -60%;}
 
+/*PAGINA LOGIN*/
+/*MENU IN ALTO*/
+nav{
+  display: flex;
+  height: 15%;
+  padding: 10px;
+  background-color: #5c9664;
+}
+.tornahome{float: right; width: 10%; height: 100%; padding: 10px; margin: 0 auto; text-align: center;}
+.tornahome img{height: 8%%; width: 100%; object-fit: cover;}
+.tornahome p{font-size: 10px; color: black; font-weight: bold;}
 
+/*CORPO CENTRALE*/
+main {
+  height: 70%;
+  background-color: black;
+  padding: 15px;
+}
+
+.accesso{
+  background-color: #5c9664;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  margin: 15px;
+  margin: auto;
+}
+
+.tabaccesso{
+  background-color: #5c9664;
+  margin: auto;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
+  height: 60%;
+  width: 50%;
+}
+
+hr {margin-top: 0px;}
+.inserisci{background-color: white;  text-align: right; padding-left: 10px;}
 
 /*FOOTER*/
-.footer_container{ display: flex; margin: auto; width: 90%; padding: 20px;}
+.footer-container{display: flex; margin: auto; width: 90%; height: 15%; padding: 20px;}
 .footer p{float: right;}
 
-.footer_container_contatti{width:40%; position: relative; padding: 10px;}
-.footer_container_contatti p,h3{color:#ffffff;display: inline;}
-.footer_container_contatti ul{display: flex;position:absolute;justify-content: end;}
-.footer_container_contatti img{width: 100%; height: auto;}
-.footer_container_contatti li{display:block; width: 15%; margin-left: 10px; margin-right: 10px;}
+.footer-container-contatti{width:40%; position: relative; padding: 10px;}
+.footer-container-contatti p,h3{color:#ffffff;display: inline;}
+.footer-container-contatti ul{display: flex;position:absolute;justify-content: end;}
+.footer-container-contatti img{width: 100%; height: auto;}
+.footer-container-contatti li{display:block; width: 10%; margin-left: 10px; margin-right: 10px; }
 
-.footer_container_orari{padding: 10px; width: 30%;}
-.footer_container_orari p,h3{color:#ffffff;display: inline;}
-.footer_container_orari li{display: inline-block; width: 100%;color: white; }
+.footer-container-orari{padding: 10px; width: 30%;}
+.footer-container-orari p,h3{color:#ffffff;display: inline;}
+.footer-container-orari li{display: inline-block; width: 100%;color: white; }
 
-.footer_container_posto p,h3{color:#ffffff;display: inline;}
-.footer_container_posto{width: 30%; padding: 10px;}
+.footer-container-posto p,h3{color:#ffffff;display: inline;}
+.footer-container-posto{width: 30%; padding: 10px;}
 
 
-.footer_container_copyright p{color:#ffffff; text-align: center;}
-.footer_container_copyright {padding: 20px;}
+.footer-container-copyright p{color:#ffffff; text-align: center;}
+.footer-container-copyright {padding: 20px;}
 
 
 
