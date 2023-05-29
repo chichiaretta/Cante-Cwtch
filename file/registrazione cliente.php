@@ -1,12 +1,19 @@
 <?php 
     session_start();
     require("../database/dati_connessione_db.php");
-    if(isset($_POST["nome"])) $nome = $_POST["nome"];  else $nome = "";
-    if(isset($_POST["cognome"])) $cognome = $_POST["cognome"];  else $cognome = "";
-    if(isset($_POST["mail"])) $mail = $_POST["mail"];  else $mail = "";
     if(isset($_POST["username"])) $username = $_POST["username"];  else $username = "";
     if(isset($_POST["password"])) $password = $_POST["password"];  else $password = "";
     if(isset($_POST["conferma"])) $conferma = $_POST["conferma"];  else $conferma = "";
+    if(isset($_POST["nome"])) $nome = $_POST["nome"];  else $nome = "";
+    if(isset($_POST["cognome"])) $cognome = $_POST["cognome"];  else $cognome = "";
+    if(isset($_POST["mail"])) $mail = $_POST["mail"];  else $mail = "";
+    if(isset($_POST["telefono"])) $telefono = $_POST["telefono"];  else $telefono = "";
+    if(isset($_POST["via"])) $via = $_POST["via"];  else $via = "";
+    if(isset($_POST["città"])) $città = $_POST["città"];  else $città = "";
+    if(isset($_POST["cap"])) $cap = $_POST["cap"];  else $cap = "";
+    if(isset($_POST["numero_civico"])) $numero_civico = $_POST["numero_civico"]; else $numero_civico = "";
+    if(isset($_POST["nascita"])) $nascita = $_POST["nascita"];  else $nascita = "";
+    if(isset($_POST["genere"])) $genere = $_POST["genere"];  else $genere = "";
 ?>
 
 <!DOCTYPE html>
@@ -44,6 +51,18 @@
                     </td>
                 </tr>
                 <tr>
+                    <td>Username:</td>
+                    <td><input class="input_dati_personali" type="text" name="username" <?php echo "value = '$username'" ?> required></td>
+                </tr>
+                <tr>
+                    <td>Password:</td>
+                    <td><input class="input_dati_personali" type="password" name="password" <?php echo "value = '$password'" ?> required></td>
+                </tr>
+                <tr>
+                    <td>Conferma password:</td>
+                    <td><input class="input_dati_personali" type="password" name="conferma" <?php echo "value = '$conferma'" ?> required></td>
+                </tr>
+                <tr>
                     <td>Nome:</td>
                     <td><input class="input_dati_personali" type="text" name="nome" <?php echo "value = '$nome'" ?> required></td>
                 </tr>
@@ -56,16 +75,34 @@
                     <td><input class="input_dati_personali" type="text" name="mail" <?php echo "value = '$mail'" ?> required></td>
                 </tr>
                 <tr>
-                    <td>Username:</td>
-                    <td><input class="input_dati_personali" type="text" name="username" <?php echo "value = '$username'" ?> required></td>
+                    <td>Telefono:</td>
+                    <td><input class="input_dati_personali" type="text" name="telefono" <?php echo "value = '$telefono'" ?> required></td>
                 </tr>
                 <tr>
-                    <td>Password:</td>
-                    <td><input class="input_dati_personali" type="password" name="password" <?php echo "value = '$password'" ?> required></td>
+                    <td>Città:</td>
+                    <td><input class="input_dati_personali" type="text" name="città" <?php echo "value = '$città'" ?> required></td>
                 </tr>
                 <tr>
-                    <td>Conferma password:</td>
-                    <td><input class="input_dati_personali" type="password" name="conferma" <?php echo "value = '$conferma'" ?> required></td>
+                    <td>Cap:</td>
+                    <td><input class="input_dati_personali" type="text" name="cap" <?php echo "value = '$cap'" ?> required></td>
+                </tr>
+                <tr>
+                    <td>Via:</td>
+                    <td><input class="input_dati_personali" type="text" name="via" <?php echo "value = '$via'" ?> required></td>
+                </tr>
+                <tr>
+                    <td>Numero civico:</td>
+                    <td><input class="input_dati_personali" type="text" name="numero_civico" <?php echo "value = '$numero_civico'" ?> required></td>
+                </tr>
+                <tr>
+                    <td>Data di nascita:</td>
+                    <td><input class="input_dati_personali" type="text" name="nascita" <?php echo "value = '$nascita'" ?> required></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center">
+                        Maschio <input type="radio" name="genere" value="maschio" <?php if($genere=="maschio") echo "checked"?>>
+                        Femmina <input type="radio" name="genere" value="femmina" <?php if($genere=="femmina") echo "checked"?>>
+                    </td>
                 </tr>
                 <tr>
                     <td colspan="2">
@@ -81,12 +118,18 @@
             </p>
         </form>
         <?php
-            if (isset($_POST["nome"]) and isset($_POST["cognome"]) and 
-                isset($_POST["mail"]) and isset($_POST["username"]) and
-              isset($_POST["password"]))
-            if($_POST["nome"] == "" or $_POST["cognome"] == "" or 
-                $_POST["mail"] == "" or $_POST["username"] == "" or 
-                $_POST["password"] == "")
+            if (isset($_POST["username"]) and isset($_POST["password"]) and 
+                isset($_POST["conferma"]) and isset($_POST["nome"]) and
+                isset($_POST["cognome"]) and isset($_POST["telefono"]) and 
+                isset($_POST["via"]) and isset($_POST["città"]) and
+                isset($_POST["cap"]) and isset($_POST["numero_civico"]) and
+                isset($_POST["genere"]) and  isset($_POST["nascita"]))
+            if($_POST["username"] == "" or $_POST["pasword"] == "" or $_POST["conferma"] == "" or 
+                $_POST["nome"] == "" or $_POST["cognome"] == "" or 
+                $_POST["mail"] == "" or $_POST["telefono"] == "" or 
+                $_POST["via"] == "" or $_POST["città"] == "" or 
+                $_POST["cap"] == "" or $_POST["numero_civico"] == "" or 
+                $_POST["genere"] == "" or $_POST["nascita"] == "")
                 {echo "username e password non possono essere vuoti!";
             } else if ($_POST["password"] != $_POST["conferma"]) {
                 echo "Le password inserite non corrispondono";
