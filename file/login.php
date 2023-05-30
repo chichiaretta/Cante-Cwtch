@@ -1,3 +1,12 @@
+<?php
+    mysql_connect(localhost, root);
+    mysql_select_db(cwtch);
+    session_start();
+    require("../database/dati_connessione_db.php")
+    if(isset($_POST["username"])) $username = $_POST["username"]; else $username="";
+    if(isset($_POST["password"])) $password = $_POST["password"]; else $password="";
+    if(isset($_POST["tipologia"])) $tipologia = $_POST["tipologia"]; else $tipologia="";
+?>
 <!DOCTYPE html>
 <html lang="it">
 
@@ -21,6 +30,7 @@
 
     <!-- Corpo centrale -->
     <main>
+		<form action="<?php $_SERVER['PHP_SEL-F'] ?>" method="post">
         <table class="tabaccesso">
              <tr>
                 <th colspan="2">Sei già registrato?</th>
@@ -57,6 +67,38 @@
                 <td colspan="2" style="text-align: center;">Non sei registrato? <a href="registrazione cliente.php">Cliente</a> o <a href="registrazione dipendente.php">dipendente</a></td>
 
         </table>
+
+        <?php
+			if (isset($_POST["username"]) and isset($_POST["password"]) and isset($_POST["tipologia"])) {
+			$conn = new mysqli($db_servername,$db_username,$db_password,$db_name);
+            if($conn->connect_error){
+                die("<p>Connessione al server non riuscita: ".$conn->connect_error."</p>");
+            }
+
+            $myquery = "SELECT username, password 
+                        FROM $tipologia 
+                        WHERE username='$username'
+                            AND password='$password'";
+
+            $ris = $conn->query($myquery) or die("<p>Query fallita! ".$conn->error."</p>");
+            if($ris->num_rows == 0){
+                echo "<p>Utente non trovato o password errata</p>";
+                $conn->close();
+            } 
+            else {
+                echo "<p>Utente trovato</p>";
+
+                $_SESSION["username"] = $username;
+                $_SESSION["tipologia"] = $tipologia ;
+                                        
+                $conn->close();
+                header("location: pagine/home.php");
+
+        }
+        }
+
+    ?>	
+            
     </main>
     <!-- Fine corpo centrale -->
 

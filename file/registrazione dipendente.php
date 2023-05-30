@@ -151,8 +151,8 @@
                     echo "Questo username è già stato usato";
                 } else {
 
-                    $myquery = "INSERT INTO $tipologia (username, password, nome, cognome, email)
-                                VALUES ('$username', '$password', '$nome', '$cognome','$email')";
+                    $myquery = INSERT INTO $genere (username, password, nome, cognome, mail, telefono, città, cap, via, numero_civico, nascita)
+                                VALUES ('$username', '$password', '$nome', '$cognome','$mail', '$telefono', '$città', '$cap','$via','$numero_civico', '$nascita')";
                     
                     if ($conn->query($myquery) === true) {
                         session_start();

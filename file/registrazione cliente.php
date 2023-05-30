@@ -1,4 +1,7 @@
+
 <?php 
+    mysql_connect(localhost, root);
+    mysql_select_db(cwtch);
     session_start();
     require("../database/dati_connessione_db.php");
     if(isset($_POST["username"])) $username = $_POST["username"];  else $username = "";
@@ -13,7 +16,7 @@
     if(isset($_POST["cap"])) $cap = $_POST["cap"];  else $cap = "";
     if(isset($_POST["numero_civico"])) $numero_civico = $_POST["numero_civico"]; else $numero_civico = "";
     if(isset($_POST["nascita"])) $nascita = $_POST["nascita"];  else $nascita = "";
-    if(isset($_POST["genere"])) $genere = $_POST["genere"];  else $genere = "";
+    if(isset($_POST["tipologia"])) $tipologia = $_POST["tipologia"];  else $tipologia = "";
 ?>
 
 <!DOCTYPE html>
@@ -100,8 +103,8 @@
                 </tr>
                 <tr>
                     <td colspan="2" style="text-align: center">
-                        Maschio <input type="radio" name="genere" value="maschio" <?php if($genere=="maschio") echo "checked"?>>
-                        Femmina <input type="radio" name="genere" value="femmina" <?php if($genere=="femmina") echo "checked"?>>
+                        Dipendente <input type="radio" name="tipologia" value="dipendente" <?php if($tipologia=="dipendente") echo "checked"?>>
+                        Cliente <input type="radio" name="tipologia" value="cliente" <?php if($tipologia=="cliente") echo "checked"?>>
                     </td>
                 </tr>
                 <tr>
@@ -123,25 +126,29 @@
                 isset($_POST["cognome"]) and isset($_POST["telefono"]) and 
                 isset($_POST["via"]) and isset($_POST["città"]) and
                 isset($_POST["cap"]) and isset($_POST["numero_civico"]) and
-                isset($_POST["genere"]) and  isset($_POST["nascita"]))
-            if($_POST["username"] == "" or $_POST["pasword"] == "" or $_POST["conferma"] == "" or 
+                isset($_POST["tipologia"]) and  isset($_POST["nascita"]))
+           
+                if($_POST["username"] == "" or $_POST["pasword"] == "" or $_POST["conferma"] == "" or 
                 $_POST["nome"] == "" or $_POST["cognome"] == "" or 
                 $_POST["mail"] == "" or $_POST["telefono"] == "" or 
                 $_POST["via"] == "" or $_POST["città"] == "" or 
                 $_POST["cap"] == "" or $_POST["numero_civico"] == "" or 
-                $_POST["genere"] == "" or $_POST["nascita"] == "")
+                $_POST["tipologia"] == "" or $_POST["nascita"] == "")
                 {echo "username e password non possono essere vuoti!";
-            } else if ($_POST["password"] != $_POST["conferma"]) {
+            
+                } else if ($_POST["password"] != $_POST["conferma"]) {
                 echo "Le password inserite non corrispondono";
-            } else {
-                $conn = new mysqli($db_servername,$db_username,$db_password,$db_name);
-                if($conn->connect_error){
-                    die("<p>Connessione al server non riuscita: ".$conn->connect_error."</p>");
-                 }
-              }
+           
+           
+                } else {
+                    $conn = new mysqli($db_servername,$db_username,$db_password,$db_name);
+                    if($conn->connect_error){
+                        die("<p>Connessione al server non riuscita: ".$conn->connect_error."</p>");
+                    }
+                }
 
                 $myquery = "SELECT username 
-						FROM utenti 
+						FROM cliente 
 						WHERE username='$username'";
 
                 $ris = $conn->query($myquery) or die("<p>Query fallita!</p>");
@@ -149,26 +156,21 @@
                     echo "Questo username è già stato usato";
                 } else {
 
-                    $myquery = "INSERT INTO $tipologia (username, password, nome, cognome, email)
-                                VALUES ('$username', '$password', '$nome', '$cognome','$email')";
+                    $toinsert = "INSERT INTO $tipologia (username, password, nome, cognome, mail, telefono, via, città, cap, numero_civico, nascita)
+                                VALUES ('$username', '$password', '$nome', '$cognome','$mail', '$telefono', '$via', '$città', '$cap', '$numero_civico', '$nascita')";
                     
-                    if ($conn->query($myquery) === true) {
-                        session_start();
-                        $_SESSION["username"]=$username;
-                       
-                        $conn->close();
-
-                        echo "Registrazione effettuata con successo!<br>sarai ridirezionato alla home tra 5 secondi.";
-                        header('Refresh: 5; URL=home.php');
-
-                    } else {
-                        echo "Non è stato possibile effettuare la registrazione per il seguente motivo: " . $conn->error;
-                    }
+                    $result = mysql_query($toinsert);
+                        if($result){
+                            echo "Inserimento avvenuto correttamente";
+                        } else{
+                            echo "Inserimento non eseguito";
+                        }
                 }
+?>
         ?>
      <?php 
         error_reporting(E_ALL ^ E_WARNING); // metodo globale ^ significa tranne e funziona da qui in poi
-		include('footer.php');
+		@include('footer.php');
 		// @include('footerrr.php');  // con @ evito la generazione di warnings o errors da parte della funzione
 	    ?>
     </main>
