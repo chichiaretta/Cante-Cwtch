@@ -138,16 +138,21 @@ main {
 .tabaccesso{
   background-color: #5c9664;
   margin: auto;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-left: 25px;
-  padding-right: 25px;
   height: 60%;
   width: 50%;
 }
 
-hr {margin-top: 0px;}
-.inserisci{background-color: white;  text-align: right; padding-left: 10px;}
+.tabaccesso th{margin-top: 0px;} 
+.inserisci{background-color: white; text-align: right; padding-left: 10px;}
+.tabaccesso input{width: 100%;}
+
+.invio{margin: 0 auto; background-color: black; width: 10px; height: 25px;}
+
+
+
+/* REGISTRATI */
+
+.intput_dati_personali{width: 100%;}
 
 /*FOOTER*/
 

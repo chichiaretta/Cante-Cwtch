@@ -1,12 +1,10 @@
 <?php
-    mysql_connect(localhost, root);
-    mysql_select_db(cwtch);
-    session_start();
-    require("../database/dati_connessione_db.php")
-    if(isset($_POST["username"])) $username = $_POST["username"]; else $username="";
-    if(isset($_POST["password"])) $password = $_POST["password"]; else $password="";
-    if(isset($_POST["tipologia"])) $tipologia = $_POST["tipologia"]; else $tipologia="";
+    require("../database/dati_connessione_db.php");
+    if(isset($POST["username"])){$username = $POST["username"];} else {$username = "";}
+    if (isset($_POST["password"])) {$password = $_POST["password"];} else {$password = "";}
+	if (isset($_POST["tipologia"])) {$tipologia = $_POST["tipologia"];} else {$tipologia = "";}
 ?>
+
 <!DOCTYPE html>
 <html lang="it">
 
@@ -15,6 +13,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="../style.css">
+    <link rel="icon" href="../img/home/sfondo.png">
 	<title>Cwtch Login</title>
 </head>
 
@@ -32,7 +31,7 @@
     <main>
 		<form action="<?php $_SERVER['PHP_SEL-F'] ?>" method="post">
         <table class="tabaccesso">
-             <tr>
+            <tr>
                 <th colspan="2">Sei già registrato?</th>
             </tr>
             <tr>
@@ -42,31 +41,37 @@
             </tr>
             <tr>
                 <td>Username:</td>
-                <td class="inserisci"></td>
+                <td><input class="contenuto_dati" type="text" name="username" value="<?php echo $username; ?>" required></td>
             </tr>
             <tr>
                 <td>Mail:</td>
-                <td class="inserisci"></td>
+                <td><input class="contenuto_dati" type="text" name="mail" value="<?php /*echo $password; */?>" required></td>
             </tr>
             <tr>
                 <td>Password:</td>
-                <td class="inserisci"></td>
+                <td><input class="contenuto_dati" type="password" name="password" value="<?php /*echo $password; */?>" required></td>
             </tr>
             <tr>
                 <td colspan="2">
                     <hr style="margin: 0px">
                 </td>
             </tr>
-            <tr>
-                <td colspan="2" style="text-align: center">
-                    Dipendente <input type="radio" name="tipologia" value="utenti" checked>
-                    Cliente <input type="radio" name="tipologia" value="bibliotecari">
+            <tr colspan="2" style="text-align: center">
+                <td>
+                    Dipendente <input type="radio" name="tipologia" value="dipendente" checked>
+                </td>
+                <td>
+                    Cliente <input type="radio" name="tipologia" value="cliente">
                 </td>
             </tr>
             <tr>
                 <td colspan="2" style="text-align: center;">Non sei registrato? <a href="registrazione cliente.php">Cliente</a> o <a href="registrazione dipendente.php">dipendente</a></td>
-
+            </tr>
         </table>
+
+        <div class="invio">
+            <p><input type="submit" value="Accedi"></p>
+        </div>
 
         <?php
 			if (isset($_POST["username"]) and isset($_POST["password"]) and isset($_POST["tipologia"])) {

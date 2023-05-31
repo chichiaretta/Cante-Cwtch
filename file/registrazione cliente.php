@@ -1,7 +1,5 @@
 
 <?php 
-    mysql_connect(localhost, root);
-    mysql_select_db(cwtch);
     session_start();
     require("../database/dati_connessione_db.php");
     if(isset($_POST["username"])) $username = $_POST["username"];  else $username = "";
@@ -28,6 +26,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link rel="stylesheet" href="../style.css">
+    <link rel="icon" href="../img/home/sfondo.png">
 	<title>Cwtch SignIn</title>
 </head>
 
@@ -55,7 +54,7 @@
                 </tr>
                 <tr>
                     <td>Username:</td>
-                    <td><input class="input_dati_personali" type="text" name="username" <?php echo "value = '$username'" ?> required></td>
+                    <td><input  class="input_dati_personali" type="text" name="username" <?php echo "value = '$username'" ?> required></td>
                 </tr>
                 <tr>
                     <td>Password:</td>
@@ -101,10 +100,12 @@
                     <td>Data di nascita:</td>
                     <td><input class="input_dati_personali" type="text" name="nascita" <?php echo "value = '$nascita'" ?> required></td>
                 </tr>
-                <tr>
-                    <td colspan="2" style="text-align: center">
-                        Dipendente <input type="radio" name="tipologia" value="dipendente" <?php if($tipologia=="dipendente") echo "checked"?>>
-                        Cliente <input type="radio" name="tipologia" value="cliente" <?php if($tipologia=="cliente") echo "checked"?>>
+                <tr colspan="2" style="text-align: center">
+                    <td>
+                        Dipendente <input type="radio" name="tipologia" value="dipendente" checked>
+                    </td>
+                    <td>
+                        Cliente <input type="radio" name="tipologia" value="cliente">
                     </td>
                 </tr>
                 <tr>
@@ -113,7 +114,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td colspan="2" style="text-align: center;"><a href="login.html">Sei già registrato?</a></td>
+                    <td colspan="2" style="text-align: center;"><a href="login.php  ">Sei già registrato?</a></td>
                 </tr>
             </table>
 			<p style="text-align: center">

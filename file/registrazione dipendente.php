@@ -25,6 +25,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link rel="stylesheet" href="../style.css">
+    <link rel="icon" href="../img/home/sfondo.png">
 	<title>Cwtch SignIn</title>
 </head>
 
@@ -110,7 +111,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td colspan="2" style="text-align: center;"><a href="login.html">Sei già registrato?</a></td>
+                    <td colspan="2" style="text-align: center;"><a href="login.php">Sei già registrato?</a></td>
                 </tr>
             </table>
 			<p style="text-align: center">
@@ -151,8 +152,8 @@
                     echo "Questo username è già stato usato";
                 } else {
 
-                    $myquery = INSERT INTO $genere (username, password, nome, cognome, mail, telefono, città, cap, via, numero_civico, nascita)
-                                VALUES ('$username', '$password', '$nome', '$cognome','$mail', '$telefono', '$città', '$cap','$via','$numero_civico', '$nascita')";
+                    $myquery = INSERT into $tipologia (username, password, nome, cognome, mail, telefono, città, cap, via, numero_civico, nascita)
+                                VALUES ('$username', '$password', '$nome', '$cognome','$mail', '$telefono', '$città', '$cap','$via','$numero_civico', '$nascita');
                     
                     if ($conn->query($myquery) === true) {
                         session_start();
