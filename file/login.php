@@ -65,7 +65,7 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="2" style="text-align: center;">Non sei registrato? <a href="registrazione cliente.php">Cliente</a> o <a href="registrazione dipendente.php">dipendente</a></td>
+                <td colspan="2" style="text-align: center;"><a href="registrazione.php">Non sei registrato?</a></td>
             </tr>
         </table>
 
@@ -75,7 +75,7 @@
 
         <?php
 			if (isset($_POST["username"]) and isset($_POST["password"]) and isset($_POST["tipologia"])) {
-			$conn = new mysqli($db_servername,$db_username,$db_password,$db_name);
+			$conn = new mysqli($db_servername,$db_username,$db_password,$db_name);}
             if($conn->connect_error){
                 die("<p>Connessione al server non riuscita: ".$conn->connect_error."</p>");
             }
@@ -90,17 +90,6 @@
                 echo "<p>Utente non trovato o password errata</p>";
                 $conn->close();
             } 
-            else {
-                echo "<p>Utente trovato</p>";
-
-                $_SESSION["username"] = $username;
-                $_SESSION["tipologia"] = $tipologia ;
-                                        
-                $conn->close();
-                header("location: pagine/home.php");
-
-        }
-        }
 
     ?>	
             

@@ -163,6 +163,7 @@
                     $result = mysql_query($toinsert);
                         if($result){
                             echo "Inserimento avvenuto correttamente";
+                            header("location: home.php");
                         } else{
                             echo "Inserimento non eseguito";
                         }
