@@ -1,3 +1,4 @@
+<<<<<<< HEAD:file/login.php
 <?php
     require("../database/dati_connessione_db.php");
     if(isset($POST["username"])){$username = $POST["username"];} else {$username = "";}
@@ -5,6 +6,8 @@
 	if (isset($_POST["tipologia"])) {$tipologia = $_POST["tipologia"];} else {$tipologia = "";}
 ?>
 
+=======
+>>>>>>> parent of 707f378 (php login):file/login.html
 <!DOCTYPE html>
 <html lang="it">
 
@@ -29,7 +32,6 @@
 
     <!-- Corpo centrale -->
     <main>
-		<form action="<?php $_SERVER['PHP_SEL-F'] ?>" method="post">
         <table class="tabaccesso">
             <tr>
                 <th colspan="2">Sei già registrato?</th>
@@ -68,6 +70,7 @@
                 <td colspan="2" style="text-align: center;"><a href="registrazione.php">Non sei registrato?</a></td>
             </tr>
         </table>
+<<<<<<< HEAD:file/login.php
 
         <div class="invio">
             <p><input type="submit" value="Accedi"></p>
@@ -93,6 +96,8 @@
 
     ?>	
             
+=======
+>>>>>>> parent of 707f378 (php login):file/login.html
     </main>
     <!-- Fine corpo centrale -->
 

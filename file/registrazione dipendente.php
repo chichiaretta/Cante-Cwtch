@@ -11,7 +11,7 @@
     if(isset($_POST["via"])) $via = $_POST["via"];  else $via = "";
     if(isset($_POST["città"])) $città = $_POST["città"];  else $città = "";
     if(isset($_POST["cap"])) $cap = $_POST["cap"];  else $cap = "";
-    if(isset($_POST["numero_civico"])) $numero_civico = $_POST["numero_civico"]; else $numero_civico = "";
+    if(isset($_POST["numero_civico"])) $numero_civico = $_POST["numero_civico"];  else $numero_civico = "";
     if(isset($_POST["nascita"])) $nascita = $_POST["nascita"];  else $nascita = "";
     if(isset($_POST["genere"])) $genere = $_POST["genere"];  else $genere = "";
 ?>
@@ -25,7 +25,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link rel="stylesheet" href="../style.css">
-    <link rel="icon" href="../img/home/sfondo.png">
 	<title>Cwtch SignIn</title>
 </head>
 
@@ -44,7 +43,7 @@
         <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
             <table class="tabaccesso">
                 <tr>
-                    <th colspan="2">Registrazione cliente</th>
+                    <th colspan="2">Registrazione dipendente</th>
                 </tr>
                 <tr>
                     <td colspan="2">
@@ -53,7 +52,7 @@
                 </tr>
                 <tr>
                     <td>Username:</td>
-                    <td><input  class="input_dati_personali" type="text" name="username" <?php echo "value = '$username'" ?> required></td>
+                    <td><input class="input_dati_personali" type="text" name="username" <?php echo "value = '$username'" ?> required></td>
                 </tr>
                 <tr>
                     <td>Password:</td>
@@ -99,19 +98,10 @@
                     <td>Data di nascita:</td>
                     <td><input class="input_dati_personali" type="text" name="nascita" <?php echo "value = '$nascita'" ?> required></td>
                 </tr>
-<<<<<<< HEAD:file/registrazione.php
-                <tr colspan="2" style="text-align: center">
-                    <td>
-                        Dipendente <input type="radio" name="tipologia" value="dipendente" checked>
-                    </td>
-                    <td>
-                        Cliente <input type="radio" name="tipologia" value="cliente">
-=======
                 <tr>
                     <td colspan="2" style="text-align: center">
                         Maschio <input type="radio" name="genere" value="maschio" <?php if($genere=="maschio") echo "checked"?>>
                         Femmina <input type="radio" name="genere" value="femmina" <?php if($genere=="femmina") echo "checked"?>>
->>>>>>> parent of 707f378 (php login):file/registrazione cliente.php
                     </td>
                 </tr>
                 <tr>
@@ -120,7 +110,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td colspan="2" style="text-align: center;"><a href="login.php  ">Sei già registrato?</a></td>
+                    <td colspan="2" style="text-align: center;"><a href="login.html">Sei già registrato?</a></td>
                 </tr>
             </table>
 			<p style="text-align: center">
@@ -133,7 +123,7 @@
                 isset($_POST["cognome"]) and isset($_POST["telefono"]) and 
                 isset($_POST["via"]) and isset($_POST["città"]) and
                 isset($_POST["cap"]) and isset($_POST["numero_civico"]) and
-                isset($_POST["genere"]) and  isset($_POST["nascita"]))
+                isset($_POST["genere"]) and isset($_POST["nascita"]))
             if($_POST["username"] == "" or $_POST["pasword"] == "" or $_POST["conferma"] == "" or 
                 $_POST["nome"] == "" or $_POST["cognome"] == "" or 
                 $_POST["mail"] == "" or $_POST["telefono"] == "" or 
@@ -141,8 +131,10 @@
                 $_POST["cap"] == "" or $_POST["numero_civico"] == "" or 
                 $_POST["genere"] == "" or $_POST["nascita"] == "")
                 {echo "username e password non possono essere vuoti!";
+
             } else if ($_POST["password"] != $_POST["conferma"]) {
                 echo "Le password inserite non corrispondono";
+            
             } else {
                 $conn = new mysqli($db_servername,$db_username,$db_password,$db_name);
                 if($conn->connect_error){
@@ -151,7 +143,7 @@
               }
 
                 $myquery = "SELECT username 
-						FROM utenti 
+						FROM dipendente 
 						WHERE username='$username'";
 
                 $ris = $conn->query($myquery) or die("<p>Query fallita!</p>");
@@ -162,15 +154,6 @@
                     $myquery = "INSERT INTO $tipologia (username, password, nome, cognome, email)
                                 VALUES ('$username', '$password', '$nome', '$cognome','$email')";
                     
-<<<<<<< HEAD:file/registrazione.php
-                    $result = mysql_query($toinsert);
-                        if($result){
-                            echo "Inserimento avvenuto correttamente";
-                            header("location: home.php");
-                        } else{
-                            echo "Inserimento non eseguito";
-                        }
-=======
                     if ($conn->query($myquery) === true) {
                         session_start();
                         $_SESSION["username"]=$username;
@@ -183,7 +166,6 @@
                     } else {
                         echo "Non è stato possibile effettuare la registrazione per il seguente motivo: " . $conn->error;
                     }
->>>>>>> parent of 707f378 (php login):file/registrazione cliente.php
                 }
         ?>
      <?php 
