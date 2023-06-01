@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cwach</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Cwach dipendente</title>
+    <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
-    <link rel="icon" href="./img/home/sfondo.png">
+    <link rel="icon" href="../img/home/sfondo.png">
 </head>
 <body>
 
@@ -40,7 +40,7 @@
     <main>
 
         <div class="cover_copy">
-            <img src="img/home/sfondo.png" alt="" class="zoom">
+            <img src="../img/home/sfondo.png" alt="" class="zoom">
             <h1 class="reveal">Cwtch</h1>
             <h4 class="reveal">enjoy it!</h4>
         </div>
@@ -56,19 +56,19 @@
                         <input type="radio" name="radio_btn" id="radio4">
 
                         <div class="slide first">
-                            <img src="img/home/home1.png" alt="">
+                            <img src="../img/home/home1.png" alt="">
                         </div>
 
                         <div class="slide">
-                            <img src="img/home/home2.png" alt="">
+                            <img src="../img/home/home2.png" alt="">
                         </div>
 
                         <div class="slide">
-                            <img src="img/home/home3.png" alt="">
+                            <img src="../img/home/home3.png" alt="">
                         </div>
 
                         <div class="slide">
-                            <img src="img/home/home4.png" alt="">
+                            <img src="../img/home/home4.png" alt="">
                         </div>    
 
                         <div class="navigation_auto">
@@ -108,19 +108,19 @@
                         <input type="radio" name="radio_btn" id="radio8">
 
                         <div class="slide first">
-                            <img src="img/home/disco1.png" alt="">
+                            <img src="../img/home/disco1.png" alt="">
                         </div>
 
                         <div class="slide">
-                            <img src="img/home/disco2.png" alt="">
+                            <img src="../img/home/disco2.png" alt="">
                         </div>
 
                         <div class="slide">
-                            <img src="img/home/disco3.png" alt="">
+                            <img src="../img/home/disco3.png" alt="">
                         </div>
 
                         <div class="slide">
-                            <img src="img/home/disco4.png" alt="">
+                            <img src="../img/home/disco4.png" alt="">
                         </div> 
 
                         <div class="navigation_auto">
@@ -158,9 +158,9 @@
                 <a href="">Cwatch@gmail.com</a>
                 <br></br>
                 <ul>
-                    <li><a href="https://www.instagram.com/"><img src="img/loghi/instagram.png" alt=""></a></li>
-                    <li><a href="https://it-it.facebook.com/"><img src="img/loghi/facebook.png" alt=""></a></li>
-                    <li><a href="https://www.tripadvisor.it/"><img src="img/loghi/tripadvisor.png" alt=""></a></li>
+                    <li><a href="https://www.instagram.com/"><img src="../img/loghi/instagram.png" alt=""></a></li>
+                    <li><a href="https://it-it.facebook.com/"><img src="../img/loghi/facebook.png" alt=""></a></li>
+                    <li><a href="https://www.tripadvisor.it/"><img src="../img/loghi/tripadvisor.png" alt=""></a></li>
                 </ul>
             </div>  
     
@@ -184,7 +184,7 @@
 </body>
 
     <a href="https:://wa.me/393333333333/?text=" class="wa-link">
-        <img src="img/loghi/wa.png" alt="" class="img-res">
+        <img src="../img/loghi/wa.png" alt="" class="img-res">
     </a>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script>
