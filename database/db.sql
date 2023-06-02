@@ -2,7 +2,7 @@
 -- Host:                         127.0.0.1
 -- Versione server:              10.4.28-MariaDB - mariadb.org binary distribution
 -- S.O. server:                  Win64
--- HeidiSQL Versione:            12.1.0.6537
+-- HeidiSQL Versione:            12.5.0.6677
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -19,23 +19,35 @@
 CREATE DATABASE IF NOT EXISTS `cwtch` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */;
 USE `cwtch`;
 
--- Dump della struttura di tabella cwtch.clienti
-CREATE TABLE IF NOT EXISTS `clienti` (
+-- Dump della struttura di tabella cwtch.cliente
+CREATE TABLE IF NOT EXISTS `cliente` (
+  `cognome` char(50) DEFAULT NULL,
   `nome` char(50) DEFAULT NULL,
-  `cognome` char(50) DEFAULT NULL
+  `username` char(50) DEFAULT NULL,
+  `password` char(50) DEFAULT NULL,
+  `citta` char(50) DEFAULT NULL,
+  `indirizzo` char(50) DEFAULT NULL,
+  `numero_civico` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Dump dei dati della tabella cwtch.clienti: ~0 rows (circa)
-DELETE FROM `clienti`;
+-- Dump dei dati della tabella cwtch.cliente: ~0 rows (circa)
+DELETE FROM `cliente`;
 
--- Dump della struttura di tabella cwtch.dipendenti
-CREATE TABLE IF NOT EXISTS `dipendenti` (
+-- Dump della struttura di tabella cwtch.dipendente
+CREATE TABLE IF NOT EXISTS `dipendente` (
+  `cognome` char(50) DEFAULT NULL,
   `nome` char(50) DEFAULT NULL,
-  `cognome` char(50) DEFAULT NULL
+  `username` char(50) DEFAULT NULL,
+  `password` char(50) DEFAULT NULL,
+  `citta` char(50) DEFAULT NULL,
+  `indirizzo` char(50) DEFAULT NULL,
+  `numero_civico` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Dump dei dati della tabella cwtch.dipendenti: ~0 rows (circa)
-DELETE FROM `dipendenti`;
+-- Dump dei dati della tabella cwtch.dipendente: ~1 rows (circa)
+DELETE FROM `dipendente`;
+INSERT INTO `dipendente` (`cognome`, `nome`, `username`, `password`, `citta`, `indirizzo`, `numero_civico`) VALUES
+	('Trormene', 'Francesco', 'BigT', 'checcotormene', 'Villanova', 'San Bartolomeo', 25);
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

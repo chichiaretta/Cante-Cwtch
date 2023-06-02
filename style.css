@@ -19,7 +19,7 @@ h2{text-align: center; margin-top: 25%; color: white; font-family:"Papyrus";}
 
 /* HEADER */
 
-header{background: black; padding: 10px; margin: 10px}
+header{background: black; padding: 10px; margin: 10px; display: flex;}
 
 .header_icon_bar{display: block; float: right; padding: 10px; display: none;transition: all 1s cubic-bezier(.215, .61, .355, 1);}
 .header_icon_bar span{display: block; height:3px; width:30px; background:#5c9664; margin-bottom: 5px;}
@@ -151,6 +151,8 @@ main {
 /* REGISTRATI */
 
 .intput_dati_personali{width: 100%;}
+
+
 
 /*FOOTER*/
 

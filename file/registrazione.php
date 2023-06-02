@@ -134,6 +134,11 @@
                         if ($conn->query($myquery) === true) {
                             session_start();
                             $_SESSION["username"]=$username;
+                            $_SESSION["nome"]=$nome;
+                            $_SESSION["cognome"]=$cognome;
+                            $_SESSION["citta"]=$citta;
+                            $_SESSION["indirizzo"]=$indirizzo;
+                            $_SESSION["numero_civico"]=$numero_civico;
                             $_SESSION["tipologia"]=$_POST["tipologia"];
                             
 						    $conn->close();
