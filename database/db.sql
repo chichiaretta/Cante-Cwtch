@@ -47,6 +47,17 @@ CREATE TABLE IF NOT EXISTS `dipendente` (
 -- Dump dei dati della tabella cwtch.dipendente: ~0 rows (circa)
 DELETE FROM `dipendente`;
 
+-- Dump della struttura di tabella cwtch.prenotazioni
+CREATE TABLE IF NOT EXISTS `prenotazioni` (
+  `nome` char(50) DEFAULT NULL,
+  `numero_persone` int(11) DEFAULT NULL,
+  `data_prenotazione` date DEFAULT NULL,
+  `ora_prenotazione` time DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- Dump dei dati della tabella cwtch.prenotazioni: ~0 rows (circa)
+DELETE FROM `prenotazioni`;
+
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IFNULL(@OLD_FOREIGN_KEY_CHECKS, 1) */;
