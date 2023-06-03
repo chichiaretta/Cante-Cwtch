@@ -107,6 +107,7 @@ h4{color: #000; text-align: center; margin:0px;}
 
 /*PAGINA LOGIN*/
 /*MENU IN ALTO*/
+
 nav{
   display: flex;
   height: 15%;
@@ -153,6 +154,9 @@ main {
 .intput_dati_personali{width: 100%;}
 
 
+/* PRENOTAZIONI */
+
+label{color: #ffffff;}
 
 /*FOOTER*/
 
