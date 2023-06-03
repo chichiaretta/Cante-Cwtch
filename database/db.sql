@@ -44,10 +44,8 @@ CREATE TABLE IF NOT EXISTS `dipendente` (
   `numero_civico` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Dump dei dati della tabella cwtch.dipendente: ~1 rows (circa)
+-- Dump dei dati della tabella cwtch.dipendente: ~0 rows (circa)
 DELETE FROM `dipendente`;
-INSERT INTO `dipendente` (`cognome`, `nome`, `username`, `password`, `citta`, `indirizzo`, `numero_civico`) VALUES
-	('Trormene', 'Francesco', 'BigT', 'checcotormene', 'Villanova', 'San Bartolomeo', 25);
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
