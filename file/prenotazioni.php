@@ -40,8 +40,8 @@
             <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="post">
                 <table class="tabaccesso">
                     <tr></tr>
-                        <td><label for="nome">Nome:</label></td>
-                        <td><input type="text" name="nome" required><br><br></td>
+                        <td><label for="username">Username:</label></td>
+                        <td><?php echo $username; ?><br><br></td>
                     </tr>
 
                     <tr>
@@ -71,7 +71,6 @@
 
 
                 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                    $nome = $_POST["nome"];
                     $numeroPersone = $_POST["numero_persone"];
                     $dataPrenotazione = $_POST["data_prenotazione"];
                     $oraPrenotazione = $_POST["ora_prenotazione"];
@@ -87,13 +86,13 @@
                         echo "C'è già una prenotazione per questo giorno a questo orario";
                     } else {
 
-                        $sql = "INSERT INTO prenotazioni (nome, numero_persone, data_prenotazione, ora_prenotazione)
-                                VALUES ('$nome', '$numeroPersone', '$dataPrenotazione', '$oraPrenotazione')";
+                        $sql = "INSERT INTO prenotazioni (username, numero_persone, data_prenotazione, ora_prenotazione)
+                                VALUES ('$username', '$numeroPersone', '$dataPrenotazione', '$oraPrenotazione')";
                         
                         if ($conn->query($sql) === TRUE) {
                             $conn->close();
                             echo "Prenotazione effettuata con successo!<br>sarai ridirezionato alla home tra 5 secondi.";
-                            header('Refresh: 5; URL=home.php');
+                            header('Refresh: 2; URL=home.php');
                         } else {
                             echo "Errore durante la prenotazione: " . $conn->error;
                         }
