@@ -29,7 +29,7 @@
     <body style="background-color: white"> 
         <nav>
             <div class="tornahome">
-                <a href="../index.html"><img src="../img/home/sfondo.png" alt=""></a>
+                <a href="home_clienti.php"><img src="../img/home/sfondo.png" alt=""></a>
                 <p>Torna alla home</p>
             </div>
         </nav>
