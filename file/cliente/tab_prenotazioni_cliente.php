@@ -48,7 +48,7 @@
                     $dataPrenotazione = $row["data_prenotazione"];
                     $oraPrenotazione = $row["ora_prenotazione"];
 
-                    echo "<tr style='text-align: center'>";
+                    echo "<tr style='text-align: center; color: white'>";
                     echo "<td>" . $username . "</td>";
                     echo "<td>" . $numeroPersone . "</td>";
                     echo "<td>" . $dataPrenotazione . "</td>";

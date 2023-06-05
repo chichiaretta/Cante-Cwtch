@@ -30,10 +30,11 @@ CREATE TABLE IF NOT EXISTS `cliente` (
   `numero_civico` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Dump dei dati della tabella cwtch.cliente: ~1 rows (circa)
+-- Dump dei dati della tabella cwtch.cliente: ~2 rows (circa)
 DELETE FROM `cliente`;
 INSERT INTO `cliente` (`cognome`, `nome`, `username`, `password`, `citta`, `indirizzo`, `numero_civico`) VALUES
-	('Canteri', 'Riccardo', 'rickycan', 'raikonen', 'Villanova', 'Belvedere', 30);
+	('Canteri', 'Riccardo', 'rickycan', 'raikonen', 'Villanova', 'Belvedere', 30),
+	('Barberio', 'Chiara', 'chiaretta12', 'chichi', 'Bellusco', 'Veneto', 13);
 
 -- Dump della struttura di tabella cwtch.dipendente
 CREATE TABLE IF NOT EXISTS `dipendente` (
@@ -46,8 +47,10 @@ CREATE TABLE IF NOT EXISTS `dipendente` (
   `numero_civico` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Dump dei dati della tabella cwtch.dipendente: ~0 rows (circa)
+-- Dump dei dati della tabella cwtch.dipendente: ~1 rows (circa)
 DELETE FROM `dipendente`;
+INSERT INTO `dipendente` (`cognome`, `nome`, `username`, `password`, `citta`, `indirizzo`, `numero_civico`) VALUES
+	('Tormene', 'Francesco', 'checco', 'checco12', 'Vimercate', 'Della Libertà', 24);
 
 -- Dump della struttura di tabella cwtch.prenotazioni
 CREATE TABLE IF NOT EXISTS `prenotazioni` (
@@ -57,10 +60,24 @@ CREATE TABLE IF NOT EXISTS `prenotazioni` (
   `ora_prenotazione` time DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Dump dei dati della tabella cwtch.prenotazioni: ~1 rows (circa)
+-- Dump dei dati della tabella cwtch.prenotazioni: ~2 rows (circa)
 DELETE FROM `prenotazioni`;
 INSERT INTO `prenotazioni` (`username`, `numero_persone`, `data_prenotazione`, `ora_prenotazione`) VALUES
-	('rickycan', 4, '2023-06-05', '19:00:00');
+	('rickycan', 4, '2023-06-05', '19:00:00'),
+	('chiaretta12', 2, '2023-06-05', '19:00:00'),
+	('rickycan', 4, '2023-06-11', '20:30:00');
+
+-- Dump della struttura di tabella cwtch.recensioni
+CREATE TABLE IF NOT EXISTS `recensioni` (
+  `titolo` char(50) DEFAULT NULL,
+  `username` char(50) DEFAULT NULL,
+  `descrizione` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- Dump dei dati della tabella cwtch.recensioni: ~1 rows (circa)
+DELETE FROM `recensioni`;
+INSERT INTO `recensioni` (`titolo`, `username`, `descrizione`) VALUES
+	('Recensione Generale sul ristorante', 'rickycan', 'Il menù è molto variegato, il personale è molto gentile e disponibile. La strttura sia esternamente sia internamente è molto elegante e ben organizzata. Consiglio a tutti di visitare almeno una volta questo fantastico ristorante.');
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
