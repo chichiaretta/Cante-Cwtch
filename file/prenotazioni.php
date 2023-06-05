@@ -1,8 +1,18 @@
 <?php
-    session_start();
-    require("../database/dati_connessione_db.php");
-?>
+	session_start();
 
+	require_once('../database/dati_connessione_db.php');
+
+	if(!isset($_SESSION['username'])){ 
+		header('location: login.php');
+	}
+
+	if( $_SESSION["tipologia"]!="cliente"){
+	    header('location: logout.php');
+	}
+
+	$username = $_SESSION["username"];	
+?>
 
 <!DOCTYPE html>
 <html lang="en">
