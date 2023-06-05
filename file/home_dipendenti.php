@@ -40,17 +40,17 @@
         </a>
 
         <div class="header_menu_item_login"><a href="logout.php">Logout</a></div>
-        <div class="header_menu_item_login"><a href="./dipendente/timbro_dip.php">Orari</a></div>
-        <div class="header_menu_item_login"><a href="./dipendente/turni_timbrati.php">Turni timbrati</a></div>
+        <div class="header_menu_item_login"><a href="dipendente/timbro_dip.php">Orari</a></div>
+        <div class="header_menu_item_login"><a href="dipendente/turni_timbrati.php">Turni timbrati</a></div>
 
 
         <menu class="menu_container">
             <ul>
-                <li class="header_menu_item"><a href="../index.html">Home</a></li>
-                <li class="header_menu_item"><a href="menu.html">Menù</a></li>
-                <li class="header_menu_item"><a href="i servizi.html">I servizi</a></li>
-                <li class="header_menu_item"><a href="contatti.html">Contatti</a></li>
-                <li class="header_menu_item"><a href="Lista alcolici.html">Enoteca e Drink</a></li>
+                <li class="header_menu_item"><a href="">Home</a></li>
+                <li class="header_menu_item"><a href="dipendente/menu_d.php">Menù</a></li>
+                <li class="header_menu_item"><a href="dipendente/i servizi_d.php">I servizi</a></li>
+                <li class="header_menu_item"><a href="dipendente/contatti_d.php">Contatti</a></li>
+                <li class="header_menu_item"><a href="dipendente/Lista alcolici_d.php">Enoteca e Drink</a></li>
             </ul>
         </menu>
 

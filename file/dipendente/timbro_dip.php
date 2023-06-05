@@ -4,11 +4,11 @@
 
 	if(!isset($_SESSION['username']))
     { 
-		header('location: login.php');
+		header('location: ../login.php');
 	}
 	if( $_SESSION["tipologia"]!="dipendente")
     {
-	    header('location: logout.php');
+	    header('location: ../logout.php');
 	}
 	$username = $_SESSION["username"];	
 ?>
