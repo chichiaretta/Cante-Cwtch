@@ -30,8 +30,10 @@ CREATE TABLE IF NOT EXISTS `cliente` (
   `numero_civico` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Dump dei dati della tabella cwtch.cliente: ~0 rows (circa)
+-- Dump dei dati della tabella cwtch.cliente: ~1 rows (circa)
 DELETE FROM `cliente`;
+INSERT INTO `cliente` (`cognome`, `nome`, `username`, `password`, `citta`, `indirizzo`, `numero_civico`) VALUES
+	('Canteri', 'Riccardo', 'rickycan', 'raikonen', 'Villanova', 'Belvedere', 30);
 
 -- Dump della struttura di tabella cwtch.dipendente
 CREATE TABLE IF NOT EXISTS `dipendente` (
@@ -49,14 +51,16 @@ DELETE FROM `dipendente`;
 
 -- Dump della struttura di tabella cwtch.prenotazioni
 CREATE TABLE IF NOT EXISTS `prenotazioni` (
-  `nome` char(50) DEFAULT NULL,
+  `username` char(50) DEFAULT NULL,
   `numero_persone` int(11) DEFAULT NULL,
   `data_prenotazione` date DEFAULT NULL,
   `ora_prenotazione` time DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Dump dei dati della tabella cwtch.prenotazioni: ~0 rows (circa)
+-- Dump dei dati della tabella cwtch.prenotazioni: ~1 rows (circa)
 DELETE FROM `prenotazioni`;
+INSERT INTO `prenotazioni` (`username`, `numero_persone`, `data_prenotazione`, `ora_prenotazione`) VALUES
+	('rickycan', 4, '2023-06-05', '19:00:00');
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
