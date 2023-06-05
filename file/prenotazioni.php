@@ -91,7 +91,7 @@
                         
                         if ($conn->query($sql) === TRUE) {
                             $conn->close();
-                            echo "<p style='width: 100%; text-align: center'>Prenotazione effettuata con successo!<br>sarai ridirezionato alla home tra 5 secondi.</p>";
+                            echo "<p style='width: 100%; text-align: center'>Prenotazione effettuata con successo!<br>sarai ridirezionato alla home tra 2 secondi.</p>";
                             header('Refresh: 2; URL=home.php');
                         } else {
                             echo "<p style='width: 100%; text-align: center'>Errore durante la prenotazione: " . $conn->error . "</p>";
