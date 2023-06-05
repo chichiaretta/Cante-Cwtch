@@ -36,7 +36,7 @@
 
     <!-- Corpo centrale -->
     <main style="background-color: white"> 
-        <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
+        <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post" style="padding-top: 100px">
             <table class="tabaccesso">
                 <tr>
                     <th colspan="2">Registrazione cliente</th>
@@ -106,26 +106,27 @@
                 if($_POST["username"] == "" or $_POST["password"] == "" or $_POST["conferma"] == "" or 
                     $_POST["nome"] == "" or $_POST["cognome"] == "" or 
                     $_POST["indirizzo"] == "" or $_POST["citta"] == "" or 
-                    $_POST["numero_civico"] == "")
-                    {echo "username e password non possono essere vuoti!";}
+                    $_POST["numero_civico"] == ""){
+                        echo "<p style='width: 100%; text-align: center'>username e password non possono essere vuoti!</p>";
+                    }
 
                 else if ($_POST["password"] != $_POST["conferma"]) {
-                    echo "Le password inserite non corrispondono";
+                    echo "<p style='width: 100%; text-align: center'>Le password inserite non corrispondono</p>";
                 } 
                 
                 else {
                     $conn = new mysqli($db_servername,$db_username,$db_password,$db_name);
                     if($conn->connect_error){
-                        die("<p>Connessione al server non riuscita: ".$conn->connect_error."</p>");
+                        die("<p style='width: 100%; text-align: center'>Connessione al server non riuscita: ".$conn->connect_error."</p>");
                     }
 
                     $myquery = "SELECT username 
                             FROM cliente 
                             WHERE username='$username'";
 
-                    $ris = $conn->query($myquery) or die("<p>Query fallita!</p>");
+                    $ris = $conn->query($myquery) or die("<p style='width: 100%; text-align: center'>Query fallita!</p>");
                     if ($ris->num_rows > 0) {
-                        echo "Questo username è già stato usato";
+                        echo "<p style='width: 100%; text-align: center'>Questo username è già stato usato</p>";
                     } else {
 
                         $myquery = "INSERT INTO $tipologia (username, password, nome, cognome, indirizzo, citta, numero_civico)
@@ -143,11 +144,11 @@
                             
 						    $conn->close();
 
-                            echo "Registrazione effettuata con successo!<br>sarai ridirezionato alla home tra 5 secondi.";
-                            header('Refresh: 5; URL=home.php');
+                            echo "<p style='width: 100%; text-align: center'>Registrazione effettuata con successo!<br>sarai ridirezionato alla home tra 2 secondi.</p>";
+                            header('Refresh: 2; URL=home.php');
 
                         } else {
-                            echo "Non è stato possibile effettuare la registrazione per il seguente motivo: " . $conn->error;
+                            echo "<p style='width: 100%; text-align: center'>Non è stato possibile effettuare la registrazione per il seguente motivo: " . $conn->error."</p>";
                         }
                     }
                 }

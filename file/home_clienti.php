@@ -44,11 +44,11 @@
 
         <menu class="menu_container">
             <ul>
-                <li class="header_menu_item"><a href="../index.html">Home</a></li>
-                <li class="header_menu_item"><a href="menu.html">Menù</a></li>
-                <li class="header_menu_item"><a href="i servizi.html">I servizi</a></li>
-                <li class="header_menu_item"><a href="contatti.html">Contatti</a></li>
-                <li class="header_menu_item"><a href="Lista alcolici.html">Enoteca e Drink</a></li>
+                <li class="header_menu_item"><a href="">Home</a></li>
+                <li class="header_menu_item"><a href="cliente/menu_c.php">Menù</a></li>
+                <li class="header_menu_item"><a href="cliente/i servizi_c.php">I servizi</a></li>
+                <li class="header_menu_item"><a href="cliente/contatti_c.php">Contatti</a></li>
+                <li class="header_menu_item"><a href="cliente/Lista alcolici_c.php">Enoteca e Drink</a></li>
             </ul>
         </menu>
 

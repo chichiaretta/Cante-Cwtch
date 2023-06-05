@@ -1,21 +1,21 @@
 <?php
     session_start();
     require("../database/dati_connessione_db.php");
-    if(isset($POST["username"])){$username = $POST["username"];} else {$username = "";}
+    if(isset($_POST["username"])){$username = $_POST["username"];} else {$username = "";}
     if (isset($_POST["password"])) {$password = $_POST["password"];} else {$password = "";}
-	if (isset($_POST["tipologia"])) {$tipologia = $_POST["tipologia"];} else {$tipologia = "";}
+    if (isset($_POST["tipologia"])) {$tipologia = $_POST["tipologia"];} else {$tipologia = "";}
 ?>
 
 <!DOCTYPE html>
 <html lang="it">
 
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="../style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
     <link rel="icon" href="../img/home/sfondo.png">
-	<title>Cwtch Login</title>
+    <title>Cwtch Login</title>
 </head>
 
 <body style="background-color: white">
@@ -28,7 +28,7 @@
     </nav>
 
     <main style="background-color: white">
-        <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
+        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" style="padding-top: 125px">
             <table class="tabaccesso">
                 <tr>
                     <th colspan="2">Sei già registrato?</th>
@@ -67,11 +67,11 @@
         </form>
 
         <?php
-			if (isset($_POST["username"]) and isset($_POST["password"]) and isset($_POST["tipologia"])) {
-                $conn = new mysqli($db_servername,$db_username,$db_password,$db_name);
+            if (isset($_POST["username"]) and isset($_POST["password"]) and isset($_POST["tipologia"])) {
+                $conn = new mysqli($db_servername, $db_username, $db_password, $db_name);
 
-                if($conn->connect_error){
-                    die("<p>Connessione al server non riuscita: ".$conn->connect_error."</p>");
+                if ($conn->connect_error) {
+                    die("<p style='width: 100%; text-align: center'>Connessione al server non riuscita: ".$conn->connect_error."</p>");
                 }
 
                 $myquery = "SELECT username, password 
@@ -79,26 +79,25 @@
                             WHERE username='$username'
                                 AND password='$password'";
 
-                $ris = $conn->query($myquery) or die("<p>Query fallita! ".$conn->error."</p>");
+                $ris = $conn->query($myquery) or die("<p style='width: 100%; text-align: center'>Query fallita! ".$conn->error."</p>");
 
-                if($ris->num_rows == 0){
-                    echo "<p>Utente non trovato o password errata</p>";
+                if ($ris->num_rows == 0) {
+                    echo "<p style='width: 100%; text-align: center'>Utente non trovato o password errata</p>";
                     $conn->close();
-                } 
+                } else {
+                    echo "<p style='width: 100%; text-align: center'>Utente trovato!</p>";
+                    echo "<p style='width: 100%; text-align: center'>Sarai reinderizzato alla home principale tra 2 secondi.</p>";
 
-                else{
-                    echo "Utente trovato!";
-
-                    session_start();
                     $_SESSION["username"] = $username;
-                    $_SESSION["tipologia"] = $_POST["tipologia"];
+                    $_SESSION["tipologia"] = $tipologia;
 
                     $conn->close();
-                    header("location: home.php");
+                    header('Refresh: 2; URL = home.php');
+                    exit;
                 }
-
             }
         ?>	
             
     </main>
 </body>
+</html>
