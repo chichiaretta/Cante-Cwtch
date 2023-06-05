@@ -40,6 +40,9 @@
         </a>
 
         <div class="header_menu_item_login"><a href="logout.php">Logout</a></div>
+        <div class="header_menu_item_login"><a href="./dipendente/timbro_dip.php">Orari</a></div>
+        <div class="header_menu_item_login"><a href="./dipendente/turni_timbrati.php">Turni timbrati</a></div>
+
 
         <menu class="menu_container">
             <ul>
