@@ -35,8 +35,8 @@
         </nav>
 
         <main style="background-color: white">
-            <h2 style="color: black; margin: 0; padding-top: 125px">Prenota un tavolo</h2>
-
+            <h2 style="color: black; margin: 0; padding-top: 125px; padding-bottom: 50px"><?php echo $username;?> compilando questo modulo prenoterai un tavolo che troverai <a style="color: black; text-decoration: underline" href="cliente/tab_prenotazioni_cliente.php">qui</a> oppure nella sezione "Le tue prenotazioni" nella tua home personale!</h2>
+           
             <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="post">
                 <table class="tabaccesso">
                     <tr></tr>

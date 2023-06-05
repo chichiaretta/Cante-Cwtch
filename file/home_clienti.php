@@ -41,6 +41,7 @@
 
         <div class="header_menu_item_login"><a href="logout.php">Logout</a></div>
         <div class="header_menu_item_login"><a href="prenotazioni.php">Prenota un tavolo</a></div>
+        <div class="header_menu_item_login"><a href="cliente/tab_prenotazioni_cliente.php">Le tue prenotazioni</a></div>
 
         <menu class="menu_container">
             <ul>
